@@ -12,53 +12,57 @@
 # =====================================================================
 
 NACHRICHTEN = [
-    {"nr": 1,  "text": "😃 ARENAAAAA 😃",
+    {"nr": 1,  "text": "@everyone 😃 ARENAAAAA 😃",
      "alle_tage": 1,  "uhrzeit": "23:50", "ab": "2026-11-13", "bild": "arena.webp"},
 
-    {"nr": 2,  "text": "Bear Trap 1 starts in 10 minutes",
+    {"nr": 2,  "text": "@everyone Bear Trap 1 starts in 10 minutes",
      "alle_tage": 2,  "uhrzeit": "13:50", "ab": "2026-11-14", "bild": "bt10min.gif"},
-    {"nr": 3,  "text": "Bear Trap 1 NOW!!",
+    {"nr": 3,  "text": "@everyone Bear Trap 1 NOW!!",
      "alle_tage": 2,  "uhrzeit": "13:59", "ab": "2026-11-14", "bild": "bt1now.gif"},
-    {"nr": 4,  "text": "Bear Trap 2 starts in 10 minutes",
+    {"nr": 4,  "text": "@everyone Bear Trap 2 starts in 10 minutes",
      "alle_tage": 2,  "uhrzeit": "18:50", "ab": "2026-11-14", "bild": "bt10min.gif"},
-    {"nr": 5,  "text": "Bear Trap 2 NOW!!",
+    {"nr": 5,  "text": "@everyone Bear Trap 2 NOW!!",
      "alle_tage": 2,  "uhrzeit": "18:59", "ab": "2026-11-14", "bild": "bt2now.gif"},
 
-    {"nr": 6,  "text": "Foundry 14 UTC starts in 10 minutes",
+    {"nr": 6,  "text": "@everyone Foundry 14 UTC starts in 10 minutes",
      "alle_tage": 14, "uhrzeit": "13:50", "ab": "2026-11-15", "bild": None},
-    {"nr": 7,  "text": "Foundry 14 UTC NOW!! Burn them all noobs🔥🔥",
+    {"nr": 7,  "text": "@everyone Foundry 14 UTC NOW!! Burn them all noobs🔥🔥",
      "alle_tage": 14, "uhrzeit": "13:59", "ab": "2026-11-15", "bild": "foundry.gif"},
-    {"nr": 8,  "text": "Foundry 19 UTC starts in 10 minutes",
+    {"nr": 8,  "text": "@everyone Foundry 19 UTC starts in 10 minutes",
      "alle_tage": 14, "uhrzeit": "18:50", "ab": "2026-11-15", "bild": None},
-    {"nr": 9,  "text": "Foundry 19 UTC NOW!! Burn them all noobs🔥🔥",
+    {"nr": 9,  "text": "@everyone Foundry 19 UTC NOW!! Burn them all noobs🔥🔥",
      "alle_tage": 14, "uhrzeit": "18:59", "ab": "2026-11-15", "bild": "foundry.gif"},
 
-    {"nr": 10, "text": "Crazy Hoe in 20 minutes! Empty your city!",
+    {"nr": 10, "text": "@everyone Crazy Hoe in 20 minutes! Empty your city!",
      "alle_tage": 14, "uhrzeit": "18:40", "ab": "2026-11-17", "bild": "CJ20min.gif"},
-    {"nr": 11, "text": "Crazy Hoe NOW👹👹",
+    {"nr": 11, "text": "@everyone Crazy Hoe NOW👹👹",
      "alle_tage": 14, "uhrzeit": "18:59", "ab": "2026-11-17", "bild": None},
-    {"nr": 12, "text": "Crazy Hoe in 20 minutes! Empty your city!",
+    {"nr": 12, "text": "@everyone Crazy Hoe in 20 minutes! Empty your city!",
      "alle_tage": 14, "uhrzeit": "13:40", "ab": "2026-11-19", "bild": "CJ20min.gif"},
-    {"nr": 13, "text": "Crazy Hoe NOW👹👹",
+    {"nr": 13, "text": "@everyone Crazy Hoe NOW👹👹",
      "alle_tage": 14, "uhrzeit": "13:59", "ab": "2026-11-19", "bild": None},
 
-    {"nr": 14, "text": "Borders open in 1 hour - SHIELD UP OR BURN🔥🔥",
+    {"nr": 14, "text": "@everyone Borders open in 1 hour - SHIELD UP OR BURN🔥🔥",
      "alle_tage": 28, "uhrzeit": "09:00", "ab": "2026-12-05", "bild": None},
-    {"nr": 15, "text": "Borders open in 10 minutes - SHIELD UP OR BURN🔥🔥",
+    {"nr": 15, "text": "@everyone Borders open in 10 minutes - SHIELD UP OR BURN🔥🔥",
      "alle_tage": 28, "uhrzeit": "09:50", "ab": "2026-12-05", "bild": "burn.gif"},
 
-    {"nr": 16, "text": "Castle battle starts in 30 minutes - teleport to castle!",
+    {"nr": 16, "text": "@everyone Castle battle starts in 30 minutes - teleport to castle!",
      "alle_tage": 14, "uhrzeit": "11:30", "ab": "2026-11-21", "bild": None},
-    {"nr": 17, "text": "Castle battle starts in 15 minutes! Set up your attack and defense squads - dont join with wrong marches!!",
+    {"nr": 17, "text": "@everyone Castle battle starts in 15 minutes! Set up your attack and defense squads - dont join with wrong marches!!",
      "alle_tage": 28, "uhrzeit": "11:45", "ab": "2026-12-05", "bild": None},
-    {"nr": 18, "text": "Castle battle NOW!!",
+    {"nr": 18, "text": "@everyone Castle battle NOW!!",
      "alle_tage": 14, "uhrzeit": "11:59", "ab": "2026-11-21", "bild": None},
 
-    {"nr": 19, "text": "SHIELD UP OR BURN🔥🔥",
+    {"nr": 19, "text": "@everyone SHIELD UP OR BURN🔥🔥",
      "alle_tage": 28, "uhrzeit": "17:01", "ab": "2026-12-05", "bild": None},
-    {"nr": 20, "text": "Remember to SHIELD UP !!",
+    {"nr": 20, "text": "@everyone Remember to SHIELD UP !!",
      "alle_tage": 28, "uhrzeit": "20:00", "ab": "2026-12-05", "bild": "burn.gif"},
 ]
+
+# Zu diesen Zeiten (UTC) weckt cron-job.org den Roboter.
+# Jede Nachricht wird vom letzten Weckruf VOR ihrer Uhrzeit gesendet.
+WECKZEITEN = ["08:50", "11:20", "13:30", "16:51", "18:30", "19:50", "23:40"]
 
 # =====================================================================
 #  Ab hier nichts ändern :)
@@ -66,7 +70,6 @@ NACHRICHTEN = [
 import json, os, subprocess, time
 from datetime import datetime, timedelta, timezone, date
 
-FENSTER = timedelta(minutes=90)    # so weit schaut ein Lauf nach vorne
 ZU_SPAET = timedelta(minutes=20)   # später als das wird nicht mehr gesendet
 
 
@@ -91,7 +94,7 @@ def senden(n):
         print(f"[TEST] würde senden: Nr. {n['nr']} ({n['uhrzeit']}) {n['text']} | Bild: {n['bild']}")
         return
     cmd = ["curl", "-sS", "--fail-with-body",
-           "--form-string", "payload_json=" + json.dumps({"content": n["text"]})]
+           "--form-string", "payload_json=" + json.dumps({"content": n["text"], "allowed_mentions": {"parse": ["everyone"]}})]
     if n["bild"]:
         if os.path.exists(n["bild"]):
             cmd += ["-F", f"files[0]=@{n['bild']}"]
@@ -107,24 +110,40 @@ def senden(n):
 
 
 def main():
-    # Manueller Test über "Run workflow": eine Nachricht sofort senden
-    if os.environ.get("EVENT") == "workflow_dispatch":
+    if not os.environ.get("DISCORD_WEBHOOK", "").strip() and not os.environ.get("TROCKEN"):
+        raise SystemExit("FEHLER: Das Secret DISCORD_WEBHOOK ist leer oder nicht gefunden. "
+                         "Bitte unter Settings > Secrets and variables > Actions > "
+                         "Repository secrets anlegen (Name genau: DISCORD_WEBHOOK).")
+    # Planmodus: cron-job.org startet den Roboter mit einer Startzeit (z.B. "23:40")
+    startzeit = os.environ.get("START", "").strip()
+    if not startzeit:
+        # Manueller Test über "Run workflow": eine Nachricht sofort senden
         nr = int(os.environ.get("TEST_NR") or 1)
         senden(next(n for n in NACHRICHTEN if n["nr"] == nr))
         return
 
-    # Geplanter Lauf: Startzeit aus dem Zeitplan ermitteln
-    minute, stunde = map(int, os.environ["CRON"].split()[:2])
+    stunde, minute = map(int, startzeit.split(":"))
     nun = jetzt()
     start = nun.replace(hour=stunde, minute=minute, second=0, microsecond=0)
-    if start > nun + timedelta(minutes=5):
+    if start > nun + timedelta(minutes=30):
         start -= timedelta(days=1)
+
+    def min_(t):
+        h, m = map(int, t.split(":"))
+        return h * 60 + m
+    weck = sorted(min_(w) for w in WECKZEITEN)
+
+    def zustaendig(uhrzeit):
+        vorher = [w for w in weck if w <= min_(uhrzeit)]
+        return vorher[-1] if vorher else weck[-1]
 
     plan = []
     for tag in (start.date(), start.date() + timedelta(days=1)):
         for n in NACHRICHTEN:
+            if zustaendig(n["uhrzeit"]) != min_(startzeit):
+                continue
             z = zielzeit(n, tag)
-            if start <= z < start + FENSTER and faellig(n, tag):
+            if start <= z < start + timedelta(hours=24) and faellig(n, tag):
                 plan.append((z, n))
     plan.sort(key=lambda x: (x[0], x[1]["nr"]))
 
