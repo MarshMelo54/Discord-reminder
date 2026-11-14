@@ -1,49 +1,29 @@
 name: Discord Erinnerungen
 
+# Gestartet wird der Roboter pünktlich von cron-job.org
+# (oder von dir zum Testen über "Run workflow").
 on:
-  schedule:
-    # Der Roboter wacht etwas früher auf und wartet dann
-    # bis zur genauen Minute. Zeiten in UTC.
-    - cron: '33 8 * * *'    # für 09:00, 09:50
-    - cron: '7 11 * * *'    # für 11:30, 11:45, 11:59
-    - cron: '17 13 * * *'   # für 13:40, 13:50, 13:59
-    - cron: '37 16 * * *'   # für 17:01
-    - cron: '17 18 * * *'   # für 18:40, 18:50, 18:59
-    - cron: '37 19 * * *'   # für 20:00
-    - cron: '27 23 * * *'   # für 23:50
-    - cron: '17 3 1 * *'    # einmal im Monat: Roboter wach halten
   workflow_dispatch:
     inputs:
       nummer:
-        description: 'Welche Nachricht testen? (Nummer)'
+        description: 'Test: Welche Nachricht sofort senden? (Nummer)'
         default: '1'
+      start:
+        description: 'Nur für cron-job.org – zum Testen leer lassen'
+        default: ''
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   erinnerungen:
-    if: github.event.schedule != '17 3 1 * *'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Nachrichten senden
         run: python3 senden.py
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          EVENT: ${{ github.event_name }}
-          CRON: ${{ github.event.schedule }}
           TEST_NR: ${{ inputs.nummer }}
-
-  wachhalten:
-    if: github.event.schedule == '17 3 1 * *'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Kleiner Eintrag, damit GitHub den Zeitplan aktiv lässt
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git commit --allow-empty -m "Wachhalten"
-          git push
+          START: ${{ inputs.start }}
